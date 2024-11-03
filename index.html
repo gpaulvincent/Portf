@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">P A U L</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li> 
+                <li><a href="#project">Projects</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="main-section">
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Your Profile Picture" class="profile-pic">
+            <div class="profile-text">
+                <h2 id="typewriter">Hi, I'm Paul Vincent G. Maderse</h2>
+                <p>Hi everyone! Welcome to my personal portfolio. Feel free to connect with me. Here are my contact details:</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/paulvincent.gutierrez.7" target="_blank">
+                        <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://instagram.com/gpaulvincent" target="_blank">
+                        <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://www.tiktok.com/@_daemonn">
+                        <img src="tiktok-icon.png" alt="TikTok" class="social-icon">
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-row">
+                        <span class="contact-label">Gmail:</span>
+                        <span class="contact-label">Phone:</span>
+                    </div>
+                    <div class="contact-row">
+                        <span class="contact-value">paulvincentmaderse28@gmail.com</span>
+                        <span class="contact-value">+63 998 196 2991</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="MainSection-Background.png" alt="Background Image" class="main-background"> 
+    </section>
+    
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <br>
+        <div class="about-content"> 
+            <div class="about-text">
+                <p>Hello! I’m Paul Vincent G. Maderse, and I'm 21 years old (born in 2002). I am currently studying at Cavite State University, Bacoor Campus. I'm passionate about expanding my knowledge in different ways of coding. I enjoy exploring new ideas and skills, and I’m excited about the opportunities that come my way.</p>
+                <p>I aspire to deepen my knowledge of coding and master various skills because I am still on my learning path. Currently, I have learned a bit of HTML and CSS, although I am continuously working to improve. I firmly believe that everything can be learned, and I look forward to seizing every opportunity to grow.</p>
+                <br>
+                <br>
+                <h3>My Skills:</h3>
+                <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Video Editing, Canva</li>
+                    <li>Basketball</li>
+                    <li>Gaming (Mobile Legends, Valorant, League of Legends)</li>
+                </ul>
+                <br>    
+                <h3>My Hobbies:</h3>
+                <ul class="hobbies-list">
+                    <li>Watching movies, series, and anime</li>
+                    <li>Basketball</li>
+                    <li>Online Gaming</li>
+                    <li>Gym</li>
+                </ul>
+            </div>
+            <div class="profilepic2-container">
+                <img src="profile-pic2.png" alt="Profile Picture" class="profile-pic2">
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education-section">
+        <div class="education-background"></div>
+        <h2>Education</h2>
+        <div class="education-content">
+            <div class="education-item">
+                <h4>2009-2015: Almanza Elementary School</h4>
+                <p>This is where I attended elementary school. I was 9 years old, and this school is located in our subdivision.</p>
+            </div>
+            <div class="education-item">
+                <h4>2015-2019: Lydia Aguilar National High School</h4>
+                <p>This is where I attended high school. I was 13 at the time, and it is again located in our subdivision.</p>
+            </div>
+            <div class="education-item">
+                <h4>2019-2021: Informatics College</h4>
+                <p>This is where I studied during my senior high school, focusing on the TVL strand, and I commuted to get there.</p>
+            </div>
+            <div class="education-item">
+                <h4>2022-Present: CvSU</h4>
+                <p>This is the school I am currently attending for college, where I am pursuing a degree in Computer Science.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="project-section">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-box">   
+                <div class="project-header">
+                    <h3>Jobmatch</h3>
+                    <a href="https://github.com/gpaulvincent/Jobmatch.git" target="_blank">View Github Projects</a>
+                </div>
+                <p>This is our group project in which we will create a website that connects freelancers with employers.</p>
+            </div>
+            <div class="project-box">
+                <div class="project-header">
+                    <h3>SwiftSeats</h3>
+                    <a href="https://github.com/gpaulvincent/swiftseats" target="_blank">View Github Projects</a>
+                </div>
+                <p>This is our group project where we created a Java application where you can reserve seats for your customers.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Paul Vincent G. Maderse. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let typedText = [
+            "Hi, I'm Paul Vincent G. Maderse",
+            "I'm a Computer Science Student"
+        ];
+        let index = 0;
+
+        function typeWriter(text, i, callback) {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML = text.substring(0, i + 1);
+                setTimeout(() => {
+                    typeWriter(text, i + 1, callback);
+                }, 100);
+            } else {
+                setTimeout(callback, 2000);
+            }
+        }
+
+        function startTypingEffect() {
+            typeWriter(typedText[index], 0, () => {
+                index = (index + 1) % typedText.length;
+                startTypingEffect();
+            });
+        }
+
+        window.onload = startTypingEffect;
+    </script>
+</body>
+</html>
